@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить билет | Мюзикл «Дорогой дневник»</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+<link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  
+    <style>
+        body { background-color: #23272e; }
+      
+        .bg-primary-custom, .btn-primary-custom {
+            background-color: #8a1e7f ;
+            border-color: #8a1e7f ;
+        }
+        .btn-primary-custom:hover { background-color: #751a6b ; }
+        .text-primary-custom { color: #8a1e7f ; }
+       
+        .ticket-step { border-left: 4px solid #8a1e7f; }
+        .seat { cursor: pointer; transition: transform 0.2s; }
+        .seat:hover { transform: scale(1.05); }
+        .seat.selected { background-color: #8a1e7f ; color: #23272e; }
+        .summary-box { background-color: #e9ecef; border-radius: .5rem;  }
+        .stage { height: 20px; background: linear-gradient(50deg, #6c757d, #495057); margin: 2rem 0; color: white; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+   
+    <header class="py-3 bg-white shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h4 mb-0 text-primary-custom">
+                    <i class="bi bi-ticket-perforated"></i> Мюзикл «Дорогой дневник»
+                </h1>
+                <a href="boost.html" class="btn btn-outline-secondary btn-sm">На главную</a>
+                <a href="animatic.html" class="btn btn-outline-secondary btn-sm"> Моя анимация</a>
+            </div>
+        </div>
+    </header>
+
+   
+    <main class="container py-5">
+        <div class="row">
+          
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="h4 mb-4 fw-bold">Оформление заказа</h2>
+
+                        
+                        <div class="mb-5 pb-3 ticket-step ps-3">
+                            <h3 class="h5 mb-3"><span class="badge bg-primary-custom me-2">1</span> Выберите дату и время</h3>
+                            <div class="d-flex flex-wrap gap-2" id="dateSelection">
+                             
+                                <button type="button" class="btn btn-outline-primary date-slot">
+                                    <div class="fw-bold">18 января, Сб</div>
+                                    <div class="small">19:00</div>
+                                </button>
+                                <button type="button" class="btn btn-outline-primary date-slot">
+                                    <div class="fw-bold">19 января, Пн</div>
+                                    <div class="small">19:00</div>
+                                </button>
+                                <button type="button" class="btn btn-outline-primary date-slot">
+                                    <div class="fw-bold">20 января, Вт</div>
+                                    <div class="small">19:00</div>
+                                </button>
+                            </div>
+                        </div>
+
+                       
+                        <div class="mb-5 pb-3 ticket-step ps-3">
+                            <h3 class="h5 mb-3"><span class="badge bg-primary-custom me-2">2</span> Выберите места в зале</h3>
+                            <p class="text-muted small mb-3">Нажмите на нужное место в зале. <span class="text-success fw-bold">Зеленым</span> отмечены свободные места, <span class="text-danger fw-bold">красным</span> — занятые.</p>
+
+                          
+                            <div class="text-center">
+                                <div class="stage w-100 mb-4 d-flex align-items-center justify-content-center">СЦЕНА</div>
+<div id="seatsChart" class="d-inline-block p-3 bg-light rounded">
+                                   
+                                    <div class="mb-2">
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="1">1</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="2">2</span>
+                                        <span class="seat btn btn-sm btn-danger m-1 disabled" data-seat="3">3</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="4">4</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="5">5</span>
+                                        <span class="seat btn btn-sm btn-danger m-1 disabled" data-seat="6">6</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="7">7</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="8">8</span>
+                                        <span class="seat btn btn-sm btn-danger m-1 disabled" data-seat="9">9</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="10">10</span>
+                                        <span class="seat btn btn-sm btn-success m-1" data-seat="11">11</span>
+                                        <span class="seat btn btn-sm btn-danger m-1 disabled" data-seat="12">12</span>
+                                      
+                                    </div>
+                                    <p class="text-muted mt-3 small">Вид сверху. Всего в зале 1 ряд.</p>
+                                </div>
+                            </div>
+                        </div>
+
+        
+                        <div class="mb-4 pb-3 ticket-step ps-3">
+                            <h3 class="h5 mb-3"><span class="badge bg-primary-custom me-2">3</span> Контактная информация</h3>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Ваше ФИО </label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Телефон </label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="email" class="form-label">Электронная почта </label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="form-text">На этот адрес будет отправлен электронный билет.</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+    </main>
+
+    
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="h6">Мюзикл «Дорогой дневник»</h5>
+                    <p class="small text-white-50 mb-0">@2026 "Дорогой дневник". Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end small">
+                    <div>Контакты: info@deardiary.ru</div>
+                    <div>Телефон: +7 (123) 456-78-91</div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+   
+</body>
+</html>

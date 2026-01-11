@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рок-мюзикл "Дорогой дневник" | Санкт-Петербург</title>
+ <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+<link rel="stylesheet" href="style.css">
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <!-- Иконки Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+  <style>
+    :root {
+      --ai-blue: #cd25eb;
+      --ai-dark: #23272e;
+      --ai-light: #f8fafc;
+      --color-1:#8a1e7f;
+      --radius-s: 4px;
+      --radius: 6px;
+      --radius-b:24px;
+    }
+   *, *::after,*::before{
+      box-sizing: border-box;
+         }
+    
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(i.jpg) center/cover no-repeat;
+      color: white;
+      
+    }
+   .border-primary{
+    border-color: var(--ai-blue) ;
+   }
+   .navbar{
+    background: #23272e;
+   }
+    .text-muted{
+        color: white;
+    }
+    
+   
+   .benefits{
+    background: var(--color-1);
+   }
+  
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--color-1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+    }
+   
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+   
+    .testimonial-card {
+      border-left: 4px solid var(--ai-blue);
+    }
+  </style>
+</head>
+<body>
+  <!-- Шапка -->
+  <nav class="navbar navbar-expand-lg navbar-dark  sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-music-note"></i> Мюзикл СПБ
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#benefits">О нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="animatic.html">Моя анимация</a></li>
+  
+          <li class="nav-item"><a class="btn btn-primary ms-2" href="boostticket.html">Билеты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Герой-баннер -->
+  <section class="hero py-5 " style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(i.jpg) center/cover no-repeat;
+      color: white;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 fw-bold">Мюзикл "Дрогой дневник"<br>в Санкт-Петербурге</h1>
+          <p class="lead mt-3">Звонок уже прозвенел — вы готовы?</p>
+          <div class="mt-4">
+           
+            <a href="boostticket.html" class="btn btn-outline-light btn-lg">Купить билет</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section id="benefits" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Информация</h2>
+        <p class="text-muted">Ключевые направления внедрения</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <!-- Адаптивная сетка (col-*)
+col-md-6 col-lg-4 → 2 колонки на планшете, 3 на десктопе.
+Без col-* — элементы растягиваются на всю ширину. -->
+          <div class="card card-hover h-100" style="background-color: #8a1e7f; border-color: #8a1e7f; color: white;">
+            <div class="card-body text-center">
+              <div class="feature-icon mx-auto mb-4">
+                <i class="bi bi-calendar-event fs-1 "></i>
+              </div>
+              <h5 class="card-title">Когда?</h5>
+              <p class="card-text">
+                <ul>
+               <li>18.01. / ВС / 19:00</li>
+               <li>19.01 / ПН / 19:00</li>
+               <li>20.01 / ВТ / 19:00</li>
+               </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-hover h-100"style="background-color: #8a1e7f; border-color: #8a1e7f; color: white;">
+            <div class="card-body text-center">
+              <div class="feature-icon mx-auto mb-4">
+                <i class="bi bi-building"></i>
+              </div>
+              <h5 class="card-title">Где?</h5>
+              <p class="card-text">
+                Пространство "Gaika Space" по адресу улица Черняховкого, 75 (метро "Лиговский проспект")
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-hover h-100"style="background-color: #8a1e7f; border-color: #8a1e7f; color: white;">
+            <div class="card-body text-center">
+              <div class="feature-icon mx-auto mb-4">
+                <i class="bi bi-clock"></i>
+              </div>
+              <h5 class="card-title">Сколько?</h5>
+              <p class="card-text">
+                Мюзикл длится 2 часа с антрактом
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Галерея технологий -->
+  <section id="gallery" class="py-5" style="background-color: #8a1e7f;">
+    <div class="container ">
+      <div class="text-center mb-5 text-white" >
+        <h2 class="fw-bold ">Погрузитесь в историю персонажей!</h2>
+       
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-hover">
+            <img src="2.png" class="card-img-top" alt="Вероника-главная героиня">
+            <div class="card-body">
+              <h5 class="card-title">Вероника</h5>
+              <p class="card-text">Застенчивая школьница, которая ведёт дневник о своих переживаниях, мечтах и первой любви.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-hover">
+            <img src="3.png" class="card-img-top" alt="Хезер-королева школы">
+            <div class="card-body">
+              <h5 class="card-title">Хезер Чендлер</h5>
+              <p class="card-text">Самая популярная девушка в школе, за чьей уверенностью скрываются собственные секреты и сомнения.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-hover">
+            <img src="4.png" class="card-img-top" alt="Джейсон-первая любовь">
+            <div class="card-body">
+              <h5 class="card-title">Джейсон Дин</h5>
+              <p class="card-text">Талантливый музыкант, который не замечает Веронику, пока не находит её потерянный дневник.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section id="testimonials" class="py-5 bg-dark">
+    <div class="container">
+      <div class="text-center mb-5 text-white">
+        <h2 class="fw-bold">Вы о нас</h2>
+        
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card testimonial-card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                
+              
+              </div>
+              <p class="card-text">
+                Первый мюзикл, на который меня пригласила повзрослевшая дочь. «Дорогой дневник» — не просто постановка, но важное событие для современного подростка, где затрагиваются темы, сложные для произнесения родителями и учителями. Поиск себя, взаимоотношения с окружающими, преодоление трудностей и не только.
+Зал битком, зрители пришли в костюмах любимых героев, впечатлений море не только от постановки, но и от атмосферы в зале.
+Организаторы чудесные, выложились на 101 из 100.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card testimonial-card h-100 ">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0 me-3">
+                 
+                </div>
+               
+              </div>
+              <p class="card-text">
+                Очень понравился мюзикл "Дорогой дневник" Была на мероприятии с дочкой .
+Актёры молодые, энергичные, выкладываются на 200 ℅! Танцы зажигательные, вокал на высоте. Атмосфера в Gaika spacе приятная. Весь персонал приветливый. В конце представления актёры фотографируются с молодыми почитателями. Молодцы!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="py-5" style="background: #8a1e7f;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center text-white">
+          <h2 class="fw-bold mb-3">Остались вопросы?</h2>
+          <p class="lead mb-4">Свяжитесь с нами</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="tel:+74951234567" class="btn btn-outline-primary btn-lg px-4 border-dark" style="background-color: #23272e; border: 2px solid#000;">
+              <i class="bi bi-telephone me-2"></i>Позвонить
+            </a>
+            <a href="boostticket.html" class="btn btn-outline-primary btn-lg px-4 " style="background-color: #23272e; border: 2px #f8fafc; ">
+              <i class="bi bi-ticket-perforated me-2"></i>Купить билет
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>О пространстве</h5>
+          <p>
+
+"Gaika Space" – это уникальное место в сердце Петербурга.
+
+Раньше здесь был механический завод, а сейчас –
+это площадка с аутентичной атмосферой и авторскими
+шоу-спектаклями, которые уже полюбились тысячам петербуржцам!</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Ссылки</h6>
+          <ul class="list-unstyled">
+            
+            <li><a href="animatic.html" class="text-light">Моя анимация</a></li>
+            <li><a href="boostticket.html" class="text-light">Билеты</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Контакты</h6>
+          <address>
+            Улица Черняховского, 75<br>
+            +7 (123) 456-78-91<br>
+            info@deardiary.ru
+          </address>
+          
+          <form class="mt-4">
+              <div class="row g-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Ваше имя" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="col-12">
+      <textarea class="form-control" rows="3" placeholder="Сообщение"></textarea>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Отправить запрос</button>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+      <hr class="my-3">
+      <div class="text-center">
+  
+    <div class="col-12">
+      
+      <button type="submit" class="btn btn-primary" > <a href="boostticket.html" style="color: white;">Купить билет</a></button>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+      <hr class="my-3">
+      <div class="text-center">
+        &copy; @2026 "Дорогой дневник". Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (для dropdown, modal и т.д.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
